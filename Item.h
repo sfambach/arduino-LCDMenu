@@ -27,7 +27,6 @@ public:
     } else return this;
   }
   
-
   virtual String getContent() = 0;
   virtual Item* right() = 0;
   virtual Item* left() = 0;

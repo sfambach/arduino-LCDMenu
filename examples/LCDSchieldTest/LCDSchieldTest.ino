@@ -112,7 +112,7 @@ void setup()
   lcd.setCursor(0, 0);
   buildMenu();
 }
-
+int ms = 0;
 void loop()
 {
 
@@ -139,7 +139,7 @@ void loop()
 
   // cehck the buttons
   lcd_key = read_LCD_buttons();
-
+  delay(150);
   switch (lcd_key)               // depending on which button was pushed, we perform an action
   {
     case btnRIGHT: current->right(); lcd.clear(); break;
@@ -151,11 +151,8 @@ void loop()
   }
 
   // Take some time, if not the buttons are to fast ;) 
-  int ms = millis();
-  while (read_LCD_buttons() != btnNONE && (millis()- ms) < 500)
-  {
-    delay(1);
-  }
+ // ms = millis(); 
+ 
 
 }
 

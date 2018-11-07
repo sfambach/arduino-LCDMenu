@@ -8,7 +8,6 @@
 class ItemMenu : public Item {
   private:
     bool _value;
-    void (*_callback) (bool);
     LinkedList<Item*>* _children;
 
     int _selChild = 0;
@@ -63,12 +62,11 @@ class ItemMenu : public Item {
     virtual bool optionDown() {
       return _children->size() > 0;
     }
+	
     virtual Item* right() {
-
       if (_children->size() > 0) {
         if (!selLastChild()) {
           _selChild++;
-          //return getSelChild();
         }
       }
       return this;
@@ -78,7 +76,6 @@ class ItemMenu : public Item {
       if (_children->size() > 0) {
         if (!selFirstChild()) {
           _selChild--;
-          //return getSelChild();
         }
       }
       return this;
