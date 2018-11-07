@@ -12,9 +12,10 @@
   Arduino UNO but should also work with other LCD displays.
   For other LCD Displays, make sure you change the button
   code.
-  
-  The Code for the LCD Shield was written by 
-  from Mark Bramwell, July 2010
+  Written: by S.Fambach 
+  URL: fambach.net
+  The Code for the LCD Shield was initally written by 
+  Mark Bramwell, July 2010
 
 ********************************************************/
 
