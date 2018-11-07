@@ -31,7 +31,7 @@ public:
       if(optionRight()){
         (*_value) = true;
         if(_callback){
-          _callback(_value);
+          _callback(*_value);
         }
       } 
       return this;
@@ -41,7 +41,7 @@ public:
       if(optionLeft()){
         (*_value) = false;
         if(_callback){
-          _callback(_value);
+          _callback(*_value);
         }
       } 
       return this;
